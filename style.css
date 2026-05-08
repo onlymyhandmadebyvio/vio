@@ -754,16 +754,28 @@ body.shop-page {
 
     .carousel-window {
         padding: 14px 12px;
-        min-height: 610px;
+        min-height: 0;
+        overflow: visible;
         border-radius: 24px;
     }
 
     .carousel-track {
-        min-height: 582px;
+        min-height: 0;
     }
 
     .carousel-slide {
+        position: relative;
+        inset: auto;
+        display: none;
+        opacity: 1;
+        transform: none;
+        pointer-events: none;
         gap: 14px;
+    }
+
+    .carousel-slide.is-active {
+        display: grid;
+        pointer-events: auto;
     }
 
     .carousel-image-wrap {
