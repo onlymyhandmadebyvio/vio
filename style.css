@@ -518,6 +518,22 @@ body.shop-page {
     right: 12px;
 }
 
+.product-slider-counter {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(24, 19, 31, 0.68);
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(4px);
+}
+
 
 /* QUI PUOI COLLEGARE LE TUE FOTO REALI
    sostituendo url("img/...") con i tuoi percorsi */
@@ -753,10 +769,11 @@ body.shop-page {
     }
 
     .carousel-window {
-        padding: 12px 10px;
+        padding: 20px;
         min-height: 0;
         overflow: visible;
-        border-radius: 22px;
+        border-radius: 18px;
+        box-shadow: 0 10px 24px rgba(43, 34, 54, 0.06);
     }
 
     .carousel-track {
@@ -779,13 +796,14 @@ body.shop-page {
     }
 
     .carousel-image-wrap {
-        min-height: 0;
-        aspect-ratio: 4 / 3;
+        min-height: 220px;
+        height: 220px;
+        aspect-ratio: auto;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 14px;
-        border-radius: 20px;
+        padding: 0;
+        border-radius: 14px;
         background: linear-gradient(145deg, #fffdfc, #f6f0ff);
     }
 
