@@ -149,15 +149,27 @@ productSliders.forEach(slider => {
     const slides = Array.from(slider.querySelectorAll('[data-product-slide]'));
     const prevButton = slider.querySelector('.product-slider-arrow.prev');
     const nextButton = slider.querySelector('.product-slider-arrow.next');
+    let counter = slider.querySelector('.product-slider-counter');
     let activeProductSlide = slides.findIndex(slide => slide.classList.contains('is-active'));
 
     if (!slides.length) return;
     if (activeProductSlide < 0) activeProductSlide = 0;
 
+    if (slides.length > 1 && !counter) {
+        counter = document.createElement('span');
+        counter.className = 'product-slider-counter';
+        counter.setAttribute('aria-live', 'polite');
+        slider.appendChild(counter);
+    }
+
     function updateProductSlider(index) {
         slides.forEach((slide, slideIndex) => {
             slide.classList.toggle('is-active', slideIndex === index);
         });
+
+        if (counter) {
+            counter.textContent = `${index + 1}/${slides.length}`;
+        }
 
         activeProductSlide = index;
     }
