@@ -753,10 +753,10 @@ body.shop-page {
     }
 
     .carousel-window {
-        padding: 14px 12px;
+        padding: 12px 10px;
         min-height: 0;
         overflow: visible;
-        border-radius: 24px;
+        border-radius: 22px;
     }
 
     .carousel-track {
@@ -770,7 +770,7 @@ body.shop-page {
         opacity: 1;
         transform: none;
         pointer-events: none;
-        gap: 14px;
+        gap: 16px;
     }
 
     .carousel-slide.is-active {
@@ -780,18 +780,26 @@ body.shop-page {
 
     .carousel-image-wrap {
         min-height: 0;
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 4 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px;
+        border-radius: 20px;
+        background: linear-gradient(145deg, #fffdfc, #f6f0ff);
     }
 
     .carousel-image {
+        width: 100%;
+        height: 100%;
         object-fit: contain;
         object-position: center;
-        background: linear-gradient(145deg, #fde9f4, #f2ecff);
+        background: transparent;
     }
 
     .carousel-copy {
         justify-content: flex-start;
-        padding: 0 2px 4px;
+        padding: 0 4px 4px;
         gap: 8px;
     }
 
@@ -802,14 +810,14 @@ body.shop-page {
     }
 
     .carousel-copy h2 {
-        font-size: 1.15rem;
-        line-height: 1.18;
+        font-size: 1.05rem;
+        line-height: 1.2;
         margin-bottom: 0;
     }
 
     .carousel-copy p {
-        font-size: 0.85rem;
-        line-height: 1.42;
+        font-size: 0.82rem;
+        line-height: 1.4;
     }
 
     .btn-paypal {
@@ -819,8 +827,8 @@ body.shop-page {
     }
 
     .carousel-arrow {
-        width: 38px;
-        height: 38px;
+        width: 34px;
+        height: 34px;
     }
 
     .shop-grid {
