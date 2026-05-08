@@ -779,7 +779,14 @@ body.shop-page {
     }
 
     .carousel-image-wrap {
-        min-height: 240px;
+        min-height: 0;
+        aspect-ratio: 1 / 1;
+    }
+
+    .carousel-image {
+        object-fit: contain;
+        object-position: center;
+        background: linear-gradient(145deg, #fde9f4, #f2ecff);
     }
 
     .carousel-copy {
