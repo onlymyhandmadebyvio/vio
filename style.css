@@ -608,6 +608,12 @@ body.shop-page {
     gap: 10px;
 }
 
+.contact-form-title {
+    margin: 0 0 6px;
+    color: #6a4c93;
+    font-family: "Playfair Display", serif;
+}
+
 .contact-form label {
     font-size: 0.85rem;
     font-weight: 600;
