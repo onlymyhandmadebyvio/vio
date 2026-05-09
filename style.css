@@ -17,11 +17,16 @@
     padding: 0;
 }
 
+img {
+    max-width: 100%;
+}
+
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background: radial-gradient(circle at top right, #ffe9f7, #faf7fc 50%, #ffffff);
     color: #c13131;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 body.shop-page {
@@ -43,6 +48,7 @@ body.shop-page {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #e6dff5;
+    gap: 16px;
 }
 
 .logo {
@@ -431,8 +437,8 @@ body.shop-page {
 
 .shop-grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(320px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
 }
 
 .product-card {
@@ -686,6 +692,17 @@ body.shop-page {
 }
 
 /* RESPONSIVE */
+@media (max-width: 1280px) {
+    .hero {
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 1fr);
+        gap: 36px;
+    }
+
+    .shop-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
 @media (max-width: 900px) {
     .about,
     .contact,
@@ -719,6 +736,10 @@ body.shop-page {
 
     .shop-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact {
+        gap: 24px;
     }
 }
 
@@ -757,10 +778,23 @@ body.shop-page {
     .main-header {
         flex-direction: column-reverse;
         gap: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 1.2rem;
+    }
+
+    .logo-img {
+        width: 58px;
+        height: 58px;
     }
 
     .hero {
         gap: 28px;
+        min-height: auto;
     }
 
     .hero-actions {
@@ -856,6 +890,7 @@ body.shop-page {
 
     .product-card {
         width: 100%;
+        padding: 20px 16px;
     }
 
     .product-img {
@@ -865,5 +900,9 @@ body.shop-page {
     .product-slider-arrow {
         width: 36px;
         height: 36px;
+    }
+
+    .contact-form {
+        padding: 16px;
     }
 }
