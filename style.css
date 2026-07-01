@@ -676,7 +676,7 @@ body.shop-page {
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
     .main-header {
         gap: 12px;
     }
@@ -738,22 +738,22 @@ body.shop-page {
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
     .hero {
-        grid-template-columns: 1fr;
-        gap: 32px;
+        grid-template-columns: minmax(0, 0.92fr) minmax(300px, 1.08fr);
+        gap: 28px;
         min-height: auto;
     }
 
     .hero-content {
-        text-align: center;
+        text-align: left;
     }
 
     .hero-content p {
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .hero-actions {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .hero-showcase {
@@ -761,33 +761,39 @@ body.shop-page {
     }
 
     .carousel-window {
-        min-height: 0;
+        min-height: 380px;
+        padding: 14px;
     }
 
     .carousel-track {
-        min-height: 0;
+        min-height: 352px;
     }
 
     .carousel-slide {
-        position: relative;
-        inset: auto;
-        grid-template-columns: 1fr;
-        gap: 18px;
-        align-items: stretch;
+        grid-template-columns: minmax(0, 1fr) minmax(240px, 0.95fr);
+        gap: 14px;
+        align-items: center;
     }
 
     .carousel-image-wrap {
-        height: auto;
-        min-height: 0;
-        aspect-ratio: 4 / 3;
+        height: clamp(220px, 24vw, 280px);
     }
 
     .carousel-image {
+        object-fit: contain;
         padding: 10px;
     }
 
     .carousel-copy {
-        padding: 0;
+        padding: 0 6px 0 0;
+    }
+
+    .carousel-copy h2 {
+        font-size: 1.45rem;
+    }
+
+    .carousel-copy p {
+        font-size: 0.94rem;
     }
 }
 
