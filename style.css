@@ -520,15 +520,20 @@ body.shop-page {
     right: 12px;
 }
 
-
-/* QUI PUOI COLLEGARE LE TUE FOTO REALI
-   sostituendo url("img/...") con i tuoi percorsi */
-.img-1 { background-image: url("9.jpg"); }
-.img-2 { background-image: url("img/orecchini_rosa_mappa.jpg"); }
-.img-3 { background-image: url("img/collana_fiori_blu.jpg"); }
-.img-4 { background-image: url("img/set_stella_blu.jpg"); }
-.img-5 { background-image: url("img/orecchini_fiore_azzurro.jpg"); }
-.img-6 { background-image: url("img/collana_delicata.jpg"); }
+.product-slider-counter {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    z-index: 2;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #5b4a70;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    box-shadow: 0 8px 18px rgba(70, 49, 97, 0.14);
+}
 
 .product-card h3 {
     font-size: 1.1rem;
