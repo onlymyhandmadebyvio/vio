@@ -157,6 +157,7 @@ productSliders.forEach(slider => {
     const slides = Array.from(slider.querySelectorAll('[data-product-slide]'));
     const prevButton = slider.querySelector('.product-slider-arrow.prev');
     const nextButton = slider.querySelector('.product-slider-arrow.next');
+    const counter = slider.querySelector('.product-slider-counter');
     let activeProductSlide = slides.findIndex(slide => slide.classList.contains('is-active'));
 
     if (!slides.length) return;
@@ -166,6 +167,18 @@ productSliders.forEach(slider => {
         slides.forEach((slide, slideIndex) => {
             slide.classList.toggle('is-active', slideIndex === index);
         });
+
+    const activeSlide = slides[index];
+        activeSlide?.querySelectorAll('img[data-src]').forEach(img => {
+            const realSrc = img.getAttribute('data-src');
+            if (realSrc && img.src !== realSrc) {
+                img.src = realSrc;
+            }
+        });
+
+        if (counter) {
+            counter.textContent = `${index + 1}/${slides.length}`;
+        }
 
         activeProductSlide = index;
     }
