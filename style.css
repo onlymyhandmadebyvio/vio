@@ -737,6 +737,61 @@ body.shop-page {
 }
 
 @media screen and (min-width: 769px) and (max-width: 1200px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-showcase {
+        width: 100%;
+    }
+
+    .carousel-window {
+        min-height: 0;
+    }
+
+    .carousel-track {
+        min-height: 0;
+    }
+
+    .carousel-slide {
+        position: relative;
+        inset: auto;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        align-items: stretch;
+    }
+
+    .carousel-image-wrap {
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+    }
+
+    .carousel-image {
+        padding: 10px;
+    }
+
+    .carousel-copy {
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
     .shop-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
