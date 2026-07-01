@@ -86,6 +86,14 @@ function updateCarousel(index) {
         slide.classList.toggle('is-active', slideIndex === index);
     });
 
+ const activeSlide = carouselSlides[index];
+    activeSlide?.querySelectorAll('img[data-src]').forEach(img => {
+        const realSrc = img.getAttribute('data-src');
+        if (realSrc && img.src !== realSrc) {
+            img.src = realSrc;
+        }
+    });
+    
     carouselDots.forEach((dot, dotIndex) => {
         dot.classList.toggle('is-active', dotIndex === index);
     });
