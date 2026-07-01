@@ -683,7 +683,7 @@ body.shop-page {
 
     .hero {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 20px;
         min-height: auto;
     }
 
@@ -701,6 +701,7 @@ body.shop-page {
     }
 
     .carousel-window {
+        padding: 12px;
         min-height: 0;
         overflow: visible;
     }
@@ -714,7 +715,7 @@ body.shop-page {
         inset: auto;
         display: none;
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 12px;
     }
 
     .carousel-slide.is-active {
@@ -724,7 +725,7 @@ body.shop-page {
     .carousel-image-wrap {
         height: auto;
         min-height: 0;
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 16 / 9;
     }
 
     .carousel-copy {
@@ -732,7 +733,21 @@ body.shop-page {
     }
 
     .carousel-copy h2 {
-        font-size: 1.8rem;
+        font-size: 1.35rem;
+        margin-bottom: 8px;
+    }
+
+    .carousel-copy p {
+        font-size: 0.92rem;
+        margin-bottom: 10px;
+    }
+
+    .carousel-tag {
+        margin-bottom: 10px;
+    }
+
+    .btn-paypal {
+        margin-top: 8px;
     }
 }
 
