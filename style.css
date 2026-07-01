@@ -669,31 +669,144 @@ body.shop-page {
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media screen and (max-width: 900px) {
+    .main-header {
+        gap: 12px;
+    }
 
-    .carousel-window{
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 32px;
         min-height: auto;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .carousel-window {
+        min-height: 0;
         overflow: visible;
     }
 
-    .carousel-track{
-        min-height: auto;
+    .carousel-track {
+        min-height: 0;
     }
 
-    .carousel-slide{
+    .carousel-slide {
         position: relative;
+        inset: auto;
         display: none;
         grid-template-columns: 1fr;
-        gap:20px;
+        gap: 18px;
     }
 
-    .carousel-slide.is-active{
-        display:grid;
+    .carousel-slide.is-active {
+        display: grid;
     }
 
+    .carousel-image-wrap {
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+    }
+
+    .carousel-copy {
+        padding: 0;
+    }
+
+    .carousel-copy h2 {
+        font-size: 1.8rem;
+    }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
+    .main-header {
+        flex-direction: column-reverse;
+        gap: 10px;
+        padding: 12px 16px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo-img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .section {
+        padding: 44px 16px;
+    }
+
+    .hero {
+        gap: 24px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1.85rem, 7vw, 2.15rem);
+        line-height: 1.15;
+    }
+
+    .hero-content p {
+        font-size: 0.96rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .carousel-window {
+        padding: 14px;
+    }
+
+    .carousel-slide {
+        gap: 16px;
+    }
+
+    .carousel-image-wrap {
+        aspect-ratio: 1 / 1;
+    }
+
+    .carousel-copy h2 {
+        font-size: 1.45rem;
+        line-height: 1.22;
+    }
+
+    .carousel-copy p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .carousel-arrow.prev {
+        left: 8px;
+    }
+
+    .carousel-arrow.next {
+        right: 8px;
+    }
+
     .shop-header {
         margin-bottom: 24px;
     }
@@ -716,197 +829,21 @@ body.shop-page {
         font-size: 0.95rem;
     }
 
-    .hero-content h1 {
-        font-size: 1.9rem;
-    }
-
-    .main-nav a {
-        margin-left: 12px;
-        font-size: 0.85rem;
-    }
-
-    .main-header {
-        flex-direction: column-reverse;
-        gap: 10px;
-    }
-
-    .hero {
-        gap: 28px;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .carousel-window {
-        padding: 16px 14px;
-        min-height: 520px;
-    }
-
-    .carousel-track {
-        min-height: 488px;
-    }
-
-    .carousel-copy h2 {
-        font-size: 1.55rem;
-    }
-
-    .carousel-arrow {
-        width: 38px;
-        height: 38px;
-    }
-
     .shop-grid {
         grid-template-columns: 1fr;
-        justify-content: stretch;
     }
 
     .product-card {
         width: 100%;
     }
 
-    .product-img {
-        height: 220px;
+    .product-img,
+    .product-slider {
+        height: 240px;
     }
 
     .product-slider-arrow {
         width: 36px;
         height: 36px;
     }
-}
-/* =========================================================
-   FIX RESPONSIVE HERO + CAROSELLO
-   Da mettere alla FINE del file CSS
-========================================================= */
-
-@media screen and (max-width: 900px) {
-
-    .hero{
-        grid-template-columns:1fr;
-        gap:32px;
-        min-height:auto;
-    }
-
-    .hero-content{
-        text-align:center;
-    }
-
-    .hero-actions{
-        justify-content:center;
-    }
-
-    .carousel-window{
-        min-height:720px;
-    }
-
-    .carousel-track{
-        min-height:680px;
-    }
-
-    .carousel-slide{
-        grid-template-columns:1fr;
-        gap:22px;
-    }
-
-    .carousel-image-wrap{
-        height:320px;
-        min-height:320px;
-    }
-
-    .carousel-copy{
-        padding:0;
-    }
-
-    .carousel-copy h2{
-        font-size:1.8rem;
-    }
-
-}
-
-@media screen and (max-width:600px){
-
-    .main-header{
-        flex-direction:column-reverse;
-        gap:12px;
-    }
-
-    .logo{
-        font-size:1.2rem;
-    }
-
-    .logo-img{
-        width:58px;
-        height:58px;
-    }
-
-    .section{
-        padding:45px 20px;
-    }
-
-    .hero{
-        gap:24px;
-        min-height:auto;
-    }
-
-    .hero-content h1{
-        font-size:2rem;
-        line-height:1.2;
-    }
-
-    .hero-content p{
-        font-size:.96rem;
-    }
-
-    .hero-actions{
-        flex-direction:column;
-    }
-
-    .btn-primary{
-        width:100%;
-        text-align:center;
-    }
-
-    .carousel-window{
-        min-height:900px;
-        padding:18px;
-    }
-
-    .carousel-track{
-        min-height:860px;
-    }
-
-    .carousel-image-wrap{
-        height:250px;
-        min-height:250px;
-    }
-
-    .carousel-copy{
-        padding:0;
-    }
-
-    .carousel-copy h2{
-        font-size:1.45rem;
-        line-height:1.25;
-    }
-
-    .carousel-copy p{
-        font-size:.95rem;
-        line-height:1.6;
-    }
-
-    .carousel-arrow{
-        width:36px;
-        height:36px;
-    }
-
-    .shop-grid{
-        grid-template-columns:1fr;
-    }
-
-    .product-slider,
-    .product-img{
-        height:240px;
-    }
-
 }
