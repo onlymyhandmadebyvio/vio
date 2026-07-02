@@ -135,10 +135,18 @@ if (carouselSlides.length) {
         });
     }
 
+      nextArrow.addEventListener('dblclick', event => {
+            event.preventDefault();
+        });
+
     if (prevArrow) {
         prevArrow.addEventListener('click', () => {
             showPrevSlide();
             startCarouselAutoplay();
+        });
+
+         prevArrow.addEventListener('dblclick', event => {
+            event.preventDefault();
         });
     }
 
@@ -146,6 +154,10 @@ if (carouselSlides.length) {
         dot.addEventListener('click', () => {
             updateCarousel(index);
             startCarouselAutoplay();
+        });
+
+        dot.addEventListener('dblclick', event => {
+            event.preventDefault();
         });
     });
 }
