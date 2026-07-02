@@ -114,7 +114,7 @@ function showPrevSlide() {
 function startCarouselAutoplay() {
     if (!carouselSlides.length) return;
     stopCarouselAutoplay();
-    carouselIntervalId = window.setInterval(showNextSlide, 4500);
+    carouselIntervalId = window.setInterval(showNextSlide, 9000);
 }
 
 function stopCarouselAutoplay() {
